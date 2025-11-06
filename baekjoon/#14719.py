@@ -2,8 +2,10 @@ h, w = map(int, input().split())
 
 blocks = list(map(int, input().split()))
 
-standard = max(blocks)
-standardIndex = blocks.index(standard)
+standardIndex, standard = max(enumerate(blocks), key=lambda item: item[1])
+
+print(list(enumerate(block for block in blocks)))
+print(standardIndex, standard)
 
 sum = 0
 
